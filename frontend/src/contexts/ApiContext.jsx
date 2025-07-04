@@ -4,7 +4,7 @@ import axios from 'axios'
 const ApiContext = createContext()
 
 // Configure axios defaults
-const API_BASE_URL = 'https://restapi-ven0.onrender.com/api'
+const API_BASE_URL = 'https://restapi-n966.onrender.com'
 
 const api = axios.create({
   baseURL: API_BASE_URL,
