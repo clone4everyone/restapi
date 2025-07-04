@@ -19,7 +19,6 @@ const Sidebar = () => {
     { name: 'History', href: '/history', icon: History },
     { name: 'Collections', href: '/collections', icon: FolderOpen },
     { name: 'Favorites', href: '/favorites', icon: Star },
-    { name: 'Statistics', href: '/statistics', icon: BarChart3 },
   ]
 
   const closeMobileMenu = () => {
