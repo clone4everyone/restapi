@@ -62,7 +62,18 @@ const RequestBuilder = ({ onRequestExecuted, currentRequest }) => {
       showNotification('URL is required', 'error')
       return
     }
-
+    if(request.name.trim().length === 0){
+      showNotification('Name is required','error')
+      return ;
+    }
+    if(request.description.trim().length === 0){
+      showNotification('Description is required','error')
+      return ;
+    }
+    if(request.collection.trim().length === 0){
+      showNotification('Collection is required','error')
+      return ;
+    }
     setLoading(true)
     try {
       // Convert header inputs to object
@@ -199,7 +210,7 @@ const RequestBuilder = ({ onRequestExecuted, currentRequest }) => {
               type="text"
               value={request.name}
               onChange={(e) => setRequest({ ...request, name: e.target.value })}
-              placeholder="Request name (optional)"
+              placeholder="Request name (require)"
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
             />
             <input
@@ -214,7 +225,7 @@ const RequestBuilder = ({ onRequestExecuted, currentRequest }) => {
           <textarea
             value={request.description}
             onChange={(e) => setRequest({ ...request, description: e.target.value })}
-            placeholder="Description (optional)"
+            placeholder="Description (require)"
             rows="2"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
