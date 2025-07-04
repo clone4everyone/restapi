@@ -1,0 +1,31 @@
+{
+  "name": "rest-client-backend",
+  "version": "1.0.0",
+  "description": "REST client backend with MikroORM and SQLite",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2",
+    "joi": "^17.11.0",
+    "@mikro-orm/core": "^5.9.7",
+    "@mikro-orm/sqlite": "^5.9.7",
+    "@mikro-orm/reflection": "^5.9.7",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": ["rest", "api", "mikroorm", "sqlite", "postman", "http-client"],
+  "author": "",
+  "license": "ISC"
+}
