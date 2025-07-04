@@ -13,10 +13,15 @@ const RequestHistory = require('./entities/RequestHistory');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+const allowedOrigin = 'https://restapi-uyh5.vercel.app/'; 
 // Middleware
 app.use(helmet());
-app.use(cors());
+
+
+app.use(cors({
+  origin: allowedOrigin,
+  credentials: true // optional: allow cookies if needed
+}));
 app.use(compression());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
