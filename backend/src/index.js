@@ -13,7 +13,7 @@ const RequestHistory = require('./entities/RequestHistory');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const allowedOrigin = 'https://restapi-uyh5.vercel.app/'; 
+const allowedOrigin = 'https://restapi-uyh5.vercel.app'; 
 // Middleware
 app.use(helmet());
 
