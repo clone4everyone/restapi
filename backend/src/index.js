@@ -102,8 +102,9 @@ async function startServer() {
     await initializeDatabase();
     
     app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
-      console.log(`📱 Health check: http://localhost:${PORT}/health`);
+     console.log(`🚀 Server running on port ${PORT}`);
+console.log(`📱 Health check ready at /health`);
+
       console.log(`🔧 API base URL: http://localhost:${PORT}/api`);
     });
   } catch (error) {
